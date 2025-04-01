@@ -20,4 +20,4 @@ jobs:
         pip install torch torchvision numpy opencv-python tensorflow keras
 
     - name: Run Detection Script
-      run: python IITDelhi_Project_Deepfake.ipynb
+      run: python IITDelhi_Project_Deepfake.py
