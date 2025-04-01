@@ -1,0 +1,23 @@
+name: Deepfake Detection Testing
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.8'
+
+    - name: Install dependencies
+      run: |
+        pip install torch torchvision numpy opencv-python tensorflow keras
+
+    - name: Run Detection Script
+      run: python test.py
